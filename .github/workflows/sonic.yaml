@@ -6,13 +6,13 @@ on:
     - main
 
 jobs:
-  build:
+  sonic-action:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Containerized Build
+      - name: Sonic action
         uses: arybolovlev/sonic-action@4e1c7858254664e06a7d397d13ce3e9f04c98e44
         with:
           pr-number: ${{ github.event.number }}
