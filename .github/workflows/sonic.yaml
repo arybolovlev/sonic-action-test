@@ -13,6 +13,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Sonic action
-        uses: arybolovlev/sonic-action@4e1c7858254664e06a7d397d13ce3e9f04c98e44
+        uses: arybolovlev/sonic-action@9e4d122f0eb60a60b1618ba95077010ccc2539ee
         with:
           pr-number: ${{ github.event.number }}
