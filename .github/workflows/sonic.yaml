@@ -1,0 +1,17 @@
+name: Sonic Action
+
+pull_request:
+  branches:
+  - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Containerized Build
+        uses: arybolovlev/sonic-action
+        with:
+          pr-number: ${{ github.event.number }}
